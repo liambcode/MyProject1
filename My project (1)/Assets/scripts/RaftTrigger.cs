@@ -13,8 +13,7 @@ public class RaftTrigger : MonoBehaviour
         startPos = transform.position;
         targetPos = startPos + transform.forward * distance;
     }
-
-    private void OnCollision(Collision other)
+    private void OnCollisionStay(Collision other)
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
     }
